@@ -23,6 +23,12 @@ public:
     }
     void insert(const std::string& key,T value) {
         const int index = hash_func(key);
+        auto& bucket = vec_list[index];
+        for (auto it = bucket.begin(), before_it = bucket.before_begin() ; it != bucket.end(); ++it,++before_it) {
+            if (it->first == key) {
+                return;
+            }
+        }
         vec_list[index].push_front(std::make_pair(key,value));
     }
     void remove(const std::string& key) {
