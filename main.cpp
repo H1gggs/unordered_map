@@ -63,22 +63,5 @@ public:
     }
 };
 int main() {
-    unordered_map<int> map;
-    map.insert("one", 1);
-    map.insert("two", 2);
-    map.insert("three", 3);
-
-    std::cout << "Value of 'one': " << map["one"] << std::endl;
-    std::cout << "Value of 'two': " << map["two"] << std::endl;
-    std::cout << "Value of 'three': " << map["three"] << std::endl;
-
-    map["four"] = 4;
-    std::cout << "Value of 'four': " << map["four"] << std::endl;
-    map.remove("four");
-    auto it = map.find("four");
-
-    if(it != nullptr)
-    std::cout<< it->second ;
-
     return 0;
 }
