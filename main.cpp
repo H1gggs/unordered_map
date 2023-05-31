@@ -12,7 +12,6 @@ private:
         for(int i = 0; i < key.size(); ++i) {
             index += static_cast<int>(key[i])/(i + 1);
         }
-        std::cout << index/key.size() << std::endl;
         return index/key.size();
     }
 public:
